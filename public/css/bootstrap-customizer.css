@@ -1,0 +1,17 @@
+:root {
+  --main-accent: #1976d2;
+}
+
+.navbar-brand {
+    position: relative;
+    width: 75%;
+    /* right: 0; */
+}
+
+.nav-link {
+  font-size: 18px;
+}
+
+.navbar-toggle {
+    z-index:3;
+}
