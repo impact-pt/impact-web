@@ -27,6 +27,10 @@ hr.hero-divider {
   margin-left: 70px;
 }
 
+
+
+/* ------- 'getting started' styling -------- */
+
 .home-greet-text {
   font-size: 58px;
   text-align: center;
@@ -53,6 +57,10 @@ hr.hero-divider {
   margin-right: auto;
   width: 20%;
 }
+
+/* ------- ------------------------- -------- */
+
+/* ------- 'index' styling -------- */
 
 .right-text {
   text-align: right;
@@ -122,6 +130,7 @@ hr.hero-divider {
   background-position:center center;
   /* background-attachment:fixed; */
   border-radius: 8px;
+  z-index: -3;
 }
 
 #hero2{
@@ -170,7 +179,8 @@ hr.hero-divider {
 
 .steps-section {
   height: 800px;
-  margin-bottom: 0px;
+  margin-bottom: -500px;
+  margin-top: 32px;
 }
 
 .steps-section img {
@@ -180,6 +190,181 @@ hr.hero-divider {
   margin-right: auto;
   /* width: 210px; */
 }
+
+.customer-header {
+  margin-top: 32px;
+  font-size: 42px;
+  font-weight: bold;
+  margin-left: 32px;
+}
+
+.customer-title {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.customer-section {
+  height: 200px;
+  padding-bottom: -800px;
+  /* padding-top: 80px; */
+  /* margin-bottom: -800px; */
+  margin-top: 12px;
+  margin-left: 32px;
+  box-shadow: 0px 10px 40px 1px rgba(25, 118, 210, 0.05);
+  border-radius: 8px;
+}
+
+.customer-section img {
+  height: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 18px;
+  /* width: 210px; */
+
+}
+
+/* ------- ------------------------- -------- */
+
+/* ------- 'about us' styling -------- */
+
+.about-section {
+  margin-left: 32px;
+}
+
+.about-header {
+  margin-top: 32px;
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.about-desc p{
+  /* position: absolute; */
+  margin-top: 12px;
+  font-size: 24px;
+  color: #888888;
+  z-index: 3;
+}
+
+.about-header-img img {
+  position: relative;
+  margin-top: 18px;
+  width: 710px;
+  margin-left: -410px;
+  opacity: 0.1;
+
+}
+
+.about-header-img-2 img {
+  position: relative;
+  margin-top: 86px;
+  width: 510px;
+  /* margin-left: -40px; */
+}
+
+.mission-section {
+  margin-left: 32px;
+}
+
+.mission-desc p{
+  font-size: 24px;
+  font-style: italic;
+  color: #888888;
+  z-index: 3;
+  margin-top: 12px;
+}
+
+.team-header {
+  margin-top: 32px;
+  font-size: 42px;
+  font-weight: bold;
+  margin-left: 32px;
+}
+
+.team-title {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.team-sub-title {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.team-section {
+  height: 335px;
+  padding-bottom: -800px;
+  /* padding-top: 80px; */
+  /* margin-bottom: -800px; */
+  margin-top: 32px;
+  margin-bottom: 32px;
+  margin-left: 32px;
+  box-shadow: 0px 10px 40px 1px rgba(25, 118, 210, 0.1);
+  border-radius: 8px;
+}
+
+.team-section img {
+  height: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 28px;
+  border-radius: 50%;
+  /* width: 210px; */
+}
+
+.contact-form {
+  background-color: #eeeeee;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.contact-form-img-div {
+  border: 2px solid #eeeeee;
+  border-radius: 5px
+}
+
+.contact-form-img img {
+  position: relative;
+  margin-top: 60px;
+  margin-left: 24px;
+  width: 410px;
+}
+
+/* ------------------------------------------------------------------------ */
+
+
+/* ------- 'about us' styling -------- */
+.footer-custom {
+  margin-top: 54px;
+  padding-left: 54px;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  background-color: var(--main-accent);
+  color: #ffffff;
+}
+
+.footer-custom h3{
+  color: #ffffff;
+}
+
+.footer-custom img{
+  width: 70%;
+  border-radius: 5px;
+  margin-top: 8px;
+  box-shadow: 0px 10px 40px 1px rgba(255, 255, 255, 0.2);
+}
+
+.copyright-stmt {
+  opacity: 0.6;
+}
+
+/* ------- ------------------ -------- */
 
 .header {
   font-size: 42px;

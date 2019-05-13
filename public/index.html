@@ -1,107 +1,297 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Home | IMPACT</title>
+    <title>Home | IMPACT</title>
 
-  <!-- Favicon -->
-  <link href="" rel="icon" type="image/png"> 
+    <!-- Favicon -->
+    <link href="" rel="icon" type="image/png">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
-  <!-- Icons -->
-  <link href="assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
-  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Icons -->
+    <link href="assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+    <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
-  <!-- Argon CSS -->
-  <link type="text/css" href="assets/css/argon.css" rel="stylesheet">
+    <!-- Argon CSS -->
+    <link type="text/css" href="assets/css/argon.css" rel="stylesheet">
 
-  <!-- Custom styler CSS -->
-  <link rel="stylesheet" href="css/styler.css">
-  <link rel="stylesheet" href="css/bootstrap-customizer.css">
+    <!-- Custom styler CSS -->
+    <link rel="stylesheet" href="css/styler.css">
+    <link rel="stylesheet" href="css/bootstrap-customizer.css">
+  </head>
+  <body>
 
-</head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <!-- <div class="container"> -->
-        <a class="navbar-brand" href="#"><img src="img/logo.png" height="50" alt=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon black">menu</span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar-default">
-            <div class="navbar-collapse-header">
-                <div class="row">
-                    <div class="col-6 collapse-brand">
-                        <a href="index.html">
-                            <img src="img/logo.png">
-                        </a>
-                    </div>
-                    <div class="col-6 collapse-close">
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
-                </div>
+    <nav class="headroom navbar navbar-expand-lg navbar-light bg-white" id="header-nav">
+      <!-- <div class="container"> -->
+          <a class="navbar-brand" href="index.html"><img src="img/logo.png" height="50" alt=""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon black">menu</span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar-default">
+              <div class="navbar-collapse-header">
+                  <div class="row">
+                      <div class="col-6 collapse-brand">
+                          <a href="index.html">
+                              <img src="img/logo.png">
+                          </a>
+                      </div>
+                      <div class="col-6 collapse-close">
+                          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+                              <span></span>
+                              <span></span>
+                          </button>
+                      </div>
+                  </div>
+              </div>
+
+              <ul class="navbar-nav ml-lg-auto">
+
+                  <li class="nav-item">
+                      <a class="nav-link nav-link-icon" href="about_impact.html">
+                          <span class="nav-link-inner--text">About Us</span>
+                      </a>
+                  </li>
+                  <!-- <li class="nav-item">
+                      <a class="nav-link nav-link-icon" href="#">
+                          <span class="nav-link-inner--text">Testimonials</span>
+                      </a>
+                  </li> -->
+                  <li class="nav-item">
+                      <a class="nav-link nav-link-icon" href="getting_started.html">
+                          <span class="nav-link-inner--text">Get Started</span>
+                      </a>
+                  </li>
+                  <!-- <li class="nav-item dropdown">
+                      <a class="nav-link nav-link-icon" href="#" id="navbar-default_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                          <span class="nav-link-inner--text">Get Started</span>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
+                          <a class="dropdown-item" href="#">iOS</a>
+                          <a class="dropdown-item" href="#">Web App</a>
+                      </div>
+                  </li> -->
+              </ul>
+
+          </div>
+      <!-- </div> -->
+  </nav>
+
+    <div class="container-fluid">
+
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <span class="alert-inner--icon"><i class="ni ni-like-1"></i></span>
+          <span class="alert-inner--text"><strong>Hello there!</strong> The product is still under development. Kindly excuse any bugs!</span>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+
+      <section id="hero1" class="hero">
+        <div class="inner">
+
+          <div class="row justify-content-center">
+            <div class="col-2 features-hero-img-div">
+              <img src="img/appScreens/iphone_vector.png">
+            </div>
+            <div class="col-5">
+              <p class="features-hero-header">Impact for <br>Clinicians and Patients</p>
+              <hr class="hero-divider">
+              <p class="features-hero-sub-header">A description line to summarise Impact's features. This text is to ensure the description covers 3 lines.</p>
             </div>
 
-            <ul class="navbar-nav ml-lg-auto">
-
-                <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="features.html">
-                        <span class="nav-link-inner--text">Features</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="#">
-                        <span class="nav-link-inner--text">Testimonials</span>
-                    </a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link nav-link-icon" href="#" id="navbar-default_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-                        <span class="nav-link-inner--text">Get Started</span>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
-                        <a class="dropdown-item" href="#">iOS</a>
-                        <a class="dropdown-item" href="#">Web App</a>
-                    </div>
-                </li>
-            </ul>
-
+          </div>
         </div>
-    <!-- </div> -->
-</nav>
+      </section>
 
-  <p class="home-greet-text">
-    Physical Therapy <br>at your finger tips.
-  </p>
+      <p class="section-title">Features</p>
 
-  <div class="home-buttons-div">
-      <button type="button" class="btn btn-outline-primary btn-lg home-buttons">⬇️ Download</button>
-      <button type="button" class="btn btn-outline-primary btn-lg home-buttons">💪 Log In</button>
-  </div>
+      <hr class="section-divider">
 
-  <br>
+      <div class="features-hero">
+        <div class="row justify-content-center">
+          <div class="col-2 features-zigzag-img-div">
+            <img src="img/appScreens/app1.png">
+          </div>
+          <div class="col-5">
+            <p class="features-zigzag-header">Impact for <br>Clinicians and Patients</p>
+            <p class="features-zigzag-sub-header">A description line to summarise Impact's features. This text is to ensure the description covers 3 lines. 😃</p>
+          </div>
+        </div>
+      </div>
 
-  <hr class="hero-divider" style="margin-left: auto; margin-right: auto;">
+      <div class="features-zigzag">
+        <div class="row justify-content-center">
 
-  <div class="home-app-screens">
-    <img src="img/appScreens/app1.png">
-  </div>
+          <div class="col-5">
+            <p class="features-zigzag-header right-text">Impact for <br>Clinicians and Patients</p>
+            <p class="features-zigzag-sub-header right-text">A description line to summarise Impact's features. This text is to ensure the description covers 3 lines. 😃</p>
+          </div>
+          <div class="col-2 features-zigzag-img-div ">
+            <img src="img/appScreens/app1.png">
+          </div>
+        </div>
+      </div>
 
-  <!-- Core -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/popper/popper.min.js"></script>
-  <script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
+      <div class="features-hero">
+        <div class="row justify-content-center">
+          <div class="col-2 features-zigzag-img-div">
+            <img src="img/appScreens/app1.png">
+          </div>
+          <div class="col-5">
+            <p class="features-zigzag-header">Impact for <br>Clinicians and Patients</p>
+            <p class="features-zigzag-sub-header">A description line to summarise Impact's features. This text is to ensure the description covers 3 lines. 😃</p>
+          </div>
+        </div>
+      </div>
 
-  <!-- Optional plugins -->
-  <!-- <script src="assets/vendor/PLUGIN_FOLDER/PLUGIN_SCRIPT.js"></script> -->
+      <br>
+      <br>
 
-  <!-- Theme JS -->
-  <script src="assets/js/argon.js"></script>
+      <p class="section-title">How It Works</p>
+
+      <hr class="section-divider">
+
+      <br>
+      <br>
+
+      <div class="row justify-content-center steps">
+        <div class="col-3 steps-section">
+          <img src="img/steps/step1.png">
+          <p class="steps-title">Step 1</p>
+          <p class="steps-desc">This is what you do in step 1</p>
+        </div>
+        <div class="col-3 steps-section">
+          <img src="img/steps/step2.png">
+          <p class="steps-title">Step 2</p>
+          <p class="steps-desc">This is what you do in step 2</p>
+        </div>
+        <div class="col-3 steps-section">
+          <img src="img/steps/step3.png">
+          <p class="steps-title">Step 3</p>
+          <p class="steps-desc">This is what you do in step 3</p>
+        </div>
+      </div>
+
+      <p class="section-title">Who we help</p>
+
+      <hr class="section-divider">
+
+      <br>
+      <br>
+
+      <div>
+        <div class="row justify-content-center">
+          <div class="col-2 customer-section">
+            <img src="img/clients/sports.png">
+            <p class="customer-title">Sports teams</p>
+          </div>
+          <div class="col-2 customer-section">
+            <img src="img/clients/doctor.png">
+            <p class="customer-title">Clinicians</p>
+          </div>
+          <div class="col-2 customer-section">
+            <img src="img/clients/patients.png">
+            <p class="customer-title">Patients</p>
+          </div>
+          <div class="col-2 customer-section">
+            <img src="img/clients/health_orgs.png">
+            <p class="customer-title">Health Orgs</p>
+          </div>
+        </div>
+        <!-- <div class="row">
+          <div class="customer-cards">
+            <div class="col-3">
+              <div class="customer-card">
+                <div class="customer-img">
+                  <img src="img/steps/step1.png">
+                </div>
+                <div class="customer-title">
+                  Customer name
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="customer-card">
+                <div class="customer-img">
+                  <img src="img/steps/step1.png">
+                </div>
+                <div class="customer-title">
+                  Customer name
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="customer-card">
+                <div class="customer-img">
+                  <img src="img/steps/step1.png">
+                </div>
+                <div class="customer-title">
+                  Customer name
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="customer-card">
+                <div class="customer-img">
+                  <img src="img/steps/step1.png">
+                </div>
+                <div class="customer-title">
+                  Customer name
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-custom">
+          <div class="row">
+              <div class="col-4">
+                <h3>Impact</h3>
+                <p>We're here to help you get fitter, and better.</p>
+              </div>
+
+              <div class="col-2">
+                <h3>Contact</h3>
+                <p>+1 (123) 456-7899</p>
+                <p>enquiry@impact.com</p>
+                <p>3220 E John Hinkle Pl, <br>Bloomington, IN 47408</p>
+              </div>
+              <div class="col-2">
+                <h3>Follow</h3>
+                <p>facebook</p>
+                <p>twitter</p>
+              </div>
+              <div class="col-4">
+                <img src="img/footer-img.png">
+              </div>
+          </div>
+          <br>
+          <p class="copyright-stmt">© Copyright 2019 Impact LLC. </p>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="assets/vendor/headroom/headroom.min.js"></script>
+    <!-- <script>
+      var myElement = document.querySelector("nav");
+      // construct an instance of Headroom, passing the element
+      var headroom  = new Headroom(myElement);
+      // initialise
+      headroom.init();
+    </script> -->
   </body>
 </html>
