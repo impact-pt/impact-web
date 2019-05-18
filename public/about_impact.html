@@ -218,8 +218,8 @@
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="email">Inquiry Type</label>
+                    <!-- <div class="form-group"> -->
+                      <!-- <label for="email">Inquiry Type</label>
                       <div class="custom-control custom-radio mb-3">
                         <input id="enquiry-type" class="custom-control-input" type="radio">
                         <label class="custom-control-label" for="enquiry-type">General Questions</label>
@@ -227,12 +227,24 @@
                       <div class="custom-control custom-radio mb-3">
                         <input id="enquiry-type" class="custom-control-input" type="radio">
                         <label class="custom-control-label" for="enquiry-type">Business Inquiry</label>
-                      </div>
+                      </div> -->
                       <!-- Controller JS
                       var form = document.getElementById("test");
                       alert(form.elements["test"].value); -->
+                    <!-- </div> -->
+                    <div class="form-group">
+                      <label for="inquiry-type">Example select</label>
+                      <select class="form-control" id="inquiry-type">
+                        <option>General Questions</option>
+                        <option>Business Inquiry</option>
+                      </select>
                     </div>
+                    <!-- <div class="form-group">
+                      <label for="inquiry-type">Inquiry Type</label>
+                      <input type="text" class="form-control form-control-alternative" id="inquiry-type" placeholder="business, general, etc.">
+                    </div> -->
                   </div>
+
                 </div>
                 <div class="row">
                   <div class="col-md-12">
@@ -242,10 +254,10 @@
                     </div>
                   </div>
                 </div>
-                <button class="btn btn-icon btn-3 btn-secondary" type="button">
-	<span class="btn-inner--icon"><i class="ni ni-send"></i></span>
-    <span class="btn-inner--text">Submit</span>
-</button>
+                <button class="btn btn-icon btn-3 btn-secondary" type="submit">
+	                 <span class="btn-inner--icon"><i class="ni ni-send"></i></span>
+                   <span class="btn-inner--text">Submit</span>
+                </button>
               </form>
             </div>
           </div>
