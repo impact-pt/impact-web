@@ -27,12 +27,20 @@ hr.hero-divider {
   margin-left: 70px;
 }
 
-
+.custom-get-started {
+  /* width: 20%; */
+  margin-left: 30px;
+  /* display: inline-block; */
+  position: fixed;
+  background-color: white;
+  color: black;
+  /* height: 5%; */
+}
 
 /* ------- 'getting started' styling -------- */
 
 .home-greet-text {
-  font-size: 58px;
+  font-size: 36px;
   text-align: center;
   margin-top: 36px;
 }
@@ -90,13 +98,14 @@ hr.hero-divider {
 
 .features-zigzag-img-div img {
   width: 200px;
-  margin-top: 68px;
+  margin-top: 70px;
   /* margin-left: -60px; */
 }
 
 .features-hero-header {
   margin-top: 126px;
-  font-size: 42px;
+  font-size: 36px;
+  width: 100%;
   font-weight: bold;
   margin-left: 70px;
   color: #ffffff;
@@ -104,13 +113,13 @@ hr.hero-divider {
 
 .features-hero-sub-header {
   margin-top: 28px;
-  font-size: 28px;
+  font-size: 22px;
   margin-left: 70px;
   color: #ffffff;
 }
 
 .features-zigzag-header {
-  margin-top: 126px;
+  margin-top: 90px;
   font-size: 32px;
   font-weight: bold;
   margin-left: 50px;
@@ -172,7 +181,7 @@ hr.hero-divider {
 
 .steps-desc {
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   color: #888888;
   margin-top: -8px;
 }
@@ -188,6 +197,7 @@ hr.hero-divider {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: -32px;
   /* width: 210px; */
 }
 
@@ -223,7 +233,10 @@ hr.hero-divider {
   margin-right: auto;
   margin-top: 18px;
   /* width: 210px; */
+}
 
+#who-we-help {
+  margin-top: 62px;
 }
 
 /* ------- ------------------------- -------- */
@@ -262,6 +275,7 @@ hr.hero-divider {
   margin-top: 86px;
   width: 510px;
   /* margin-left: -40px; */
+  z-index: -3;
 }
 
 .mission-section {

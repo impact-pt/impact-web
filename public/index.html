@@ -50,31 +50,50 @@
 
               <ul class="navbar-nav ml-lg-auto">
 
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                       <a class="nav-link nav-link-icon" href="about_impact.html">
                           <span class="nav-link-inner--text">About Us</span>
                       </a>
+                  </li> -->
+                  <li class="nav-item dropdown">
+                      <a class="nav-link nav-link-icon" href="#" id="navbar-default_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="nav-link-inner--text">Home</span>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
+                          <a class="dropdown-item" href="index.html#features">Features</a>
+                          <a class="dropdown-item" href="index.html#how-it-works">How It Works</a>
+                          <a class="dropdown-item" href="index.html#who-we-help">Who We Help</a>
+                      </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link nav-link-icon" href="#" id="navbar-default_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="nav-link-inner--text">About Us</span>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
+                          <a class="dropdown-item" href="about_impact.html#our-mission">Our Mission</a>
+                          <a class="dropdown-item" href="about_impact.html#our-story">Our Story</a>
+                          <a class="dropdown-item" href="about_impact.html#the-team">Meet the team</a>
+                          <a class="dropdown-item" href="about_impact.html#contact-us">Contact Us</a>
+                      </div>
                   </li>
                   <!-- <li class="nav-item">
                       <a class="nav-link nav-link-icon" href="#">
                           <span class="nav-link-inner--text">Testimonials</span>
                       </a>
                   </li> -->
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                       <a class="nav-link nav-link-icon" href="getting_started.html">
                           <span class="nav-link-inner--text">Get Started</span>
                       </a>
-                  </li>
-                  <!-- <li class="nav-item dropdown">
-                      <a class="nav-link nav-link-icon" href="#" id="navbar-default_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-                          <span class="nav-link-inner--text">Get Started</span>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
-                          <a class="dropdown-item" href="#">iOS</a>
-                          <a class="dropdown-item" href="#">Web App</a>
-                      </div>
                   </li> -->
+                  <li class="nav-item dropdown">
+                      <a class="nav-link nav-link-icon" href="getting_started.html"><span class="nav-link-inner--text">Get Started</span></a>
+                      <button class="btn dropdown-toggle custom-get-started" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
+                          <a class="dropdown-item" href="#">Download</a>
+                          <a class="dropdown-item" href="#">Log In</a>
+                      </div>
+                  </li>
               </ul>
 
           </div>
@@ -83,13 +102,13 @@
 
     <div class="container-fluid">
 
-      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
           <span class="alert-inner--icon"><i class="ni ni-like-1"></i></span>
           <span class="alert-inner--text"><strong>Hello there!</strong> The product is still under development. Kindly excuse any bugs!</span>
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
           </button>
-      </div>
+      </div> -->
 
       <section id="hero1" class="hero">
         <div class="inner">
@@ -99,16 +118,16 @@
               <img src="img/appScreens/iphone_vector.png">
             </div>
             <div class="col-5">
-              <p class="features-hero-header">Impact for <br>Clinicians and Patients</p>
+              <p class="features-hero-header">Patient Management Platform for Physical Therapy</p>
               <hr class="hero-divider">
-              <p class="features-hero-sub-header">A description line to summarise Impact's features. This text is to ensure the description covers 3 lines.</p>
+              <p class="features-hero-sub-header">A mobile application that will imPacT patient’s adherence to their home exercise programs for the benefit of doctors, clinics/sports teams, and patients.</p>
             </div>
 
           </div>
         </div>
       </section>
 
-      <p class="section-title">Features</p>
+      <p class="section-title" id="features">Features</p>
 
       <hr class="section-divider">
 
@@ -118,8 +137,8 @@
             <img src="img/appScreens/app1.png">
           </div>
           <div class="col-5">
-            <p class="features-zigzag-header">Impact for <br>Clinicians and Patients</p>
-            <p class="features-zigzag-sub-header">A description line to summarise Impact's features. This text is to ensure the description covers 3 lines. 😃</p>
+            <p class="features-zigzag-header">Eliminating paper handouts</p>
+            <p class="features-zigzag-sub-header">Giving patients constant access to better quality videos and pictures through a mobile application. </p>
           </div>
         </div>
       </div>
@@ -128,8 +147,8 @@
         <div class="row justify-content-center">
 
           <div class="col-5">
-            <p class="features-zigzag-header right-text">Impact for <br>Clinicians and Patients</p>
-            <p class="features-zigzag-sub-header right-text">A description line to summarise Impact's features. This text is to ensure the description covers 3 lines. 😃</p>
+            <p class="features-zigzag-header right-text">Increase adherence <br>through reminders</p>
+            <p class="features-zigzag-sub-header right-text">Allows patients to customize reminders to fit their daily schedule for each exercise. Patients are given exercises that require a different number of sets per day, which is why the customization feature is imperative for increased adherence. </p>
           </div>
           <div class="col-2 features-zigzag-img-div ">
             <img src="img/appScreens/app1.png">
@@ -143,8 +162,8 @@
             <img src="img/appScreens/app1.png">
           </div>
           <div class="col-5">
-            <p class="features-zigzag-header">Impact for <br>Clinicians and Patients</p>
-            <p class="features-zigzag-sub-header">A description line to summarise Impact's features. This text is to ensure the description covers 3 lines. 😃</p>
+            <p class="features-zigzag-header">Progress tracking</p>
+            <p class="features-zigzag-sub-header">A measurement charts that show the degree that the patient reached for each exercise tested. This allows patients to set goals and increases doctor’s ability to clear patients because the patient will always have their numbers with them at checkups.</p>
           </div>
         </div>
       </div>
@@ -152,7 +171,7 @@
       <br>
       <br>
 
-      <p class="section-title">How It Works</p>
+      <p class="section-title" id="how-it-works">How It Works</p>
 
       <hr class="section-divider">
 
@@ -163,25 +182,24 @@
         <div class="col-3 steps-section">
           <img src="img/steps/step1.png">
           <p class="steps-title">Step 1</p>
-          <p class="steps-desc">This is what you do in step 1</p>
+          <p class="steps-desc">Physical Therapist/Athletic Trainer enters in the HEP that the patient should complete. </p>
         </div>
         <div class="col-3 steps-section">
           <img src="img/steps/step2.png">
           <p class="steps-title">Step 2</p>
-          <p class="steps-desc">This is what you do in step 2</p>
+          <p class="steps-desc">Patient completes HEP outside of the office due to reminders and accessibility, and schedules next appointment. </p>
         </div>
         <div class="col-3 steps-section">
           <img src="img/steps/step3.png">
           <p class="steps-title">Step 3</p>
-          <p class="steps-desc">This is what you do in step 3</p>
+          <p class="steps-desc">Physical Therapist/Athletic Trainer updates HEP and progress after appointments.</p>
         </div>
       </div>
 
-      <p class="section-title">Who we help</p>
+      <p class="section-title" id="who-we-help">Who we help</p>
 
       <hr class="section-divider">
 
-      <br>
       <br>
 
       <div>
@@ -192,7 +210,7 @@
           </div>
           <div class="col-2 customer-section">
             <img src="img/clients/doctor.png">
-            <p class="customer-title">Clinicians</p>
+            <p class="customer-title">Clinics</p>
           </div>
           <div class="col-2 customer-section">
             <img src="img/clients/patients.png">
@@ -200,7 +218,7 @@
           </div>
           <div class="col-2 customer-section">
             <img src="img/clients/health_orgs.png">
-            <p class="customer-title">Health Orgs</p>
+            <p class="customer-title">Doctors</p>
           </div>
         </div>
         <!-- <div class="row">
@@ -256,19 +274,19 @@
           <div class="row">
               <div class="col-4">
                 <h3>Impact</h3>
-                <p>We're here to help you get fitter, and better.</p>
+                <p>Pushing patients to progress further in their rehabilitation. </p>
               </div>
 
               <div class="col-2">
                 <h3>Contact</h3>
-                <p>+1 (123) 456-7899</p>
-                <p>enquiry@impact.com</p>
+                <p>+1 214-532-9508</p>
+                <p>inquiry@impact.com</p>
                 <p>3220 E John Hinkle Pl, <br>Bloomington, IN 47408</p>
               </div>
               <div class="col-2">
                 <h3>Follow</h3>
-                <p>facebook</p>
-                <p>twitter</p>
+                <p>Instagram</p>
+                <p>Twitter</p>
               </div>
               <div class="col-4">
                 <img src="img/footer-img.png">
@@ -286,6 +304,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="assets/vendor/headroom/headroom.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
     <!-- <script>
       var myElement = document.querySelector("nav");
       // construct an instance of Headroom, passing the element
