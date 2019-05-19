@@ -8,7 +8,7 @@ class Exercise{
   public $description;
 
   public function __construct($data){
-    $this->name = $data['name']
+    $this->name = $data['name'];
     $this->description = $data['description'];
   }
 
