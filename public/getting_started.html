@@ -23,6 +23,9 @@
   <link rel="stylesheet" href="css/styler.css">
   <link rel="stylesheet" href="css/bootstrap-customizer.css">
 
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
@@ -105,8 +108,8 @@
   </p>
 
   <div class="home-buttons-div">
-      <button type="button" class="btn btn-outline-primary btn-lg home-buttons">Download</button>
-      <button type="button" class="btn btn-outline-primary btn-lg home-buttons">Log In</button>
+      <button type="button" class="btn btn-outline-primary btn-lg home-buttons" data-toggle="modal" data-target="#modal-download"><i class="fas fa-user"></i> &nbsp;Download</button>
+      <button type="button" class="btn btn-outline-primary btn-lg home-buttons" data-toggle="modal" data-target="#modal-form-log-in"><i class="fas fa-user"></i> &nbsp;Log In</button>
   </div>
 
   <br>
@@ -116,6 +119,140 @@
   <div class="home-app-screens">
     <img src="img/appScreens/app1.png">
   </div>
+
+  <!--log in / sign up modals-->
+
+      <div class="modal fade" id="modal-form-log-in" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+        <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-body p-0">
+              <div class="card bg-secondary shadow border-0">
+                  <div class="card-body px-lg-5 py-lg-5">
+                      <div class="text-center text-muted mb-4">
+                          <p>Sign in with credentials</p>
+                      </div>
+                      <form role="form">
+                          <div class="form-group mb-3">
+                              <div class="input-group input-group-alternative">
+                                  <div class="input-group-prepend">
+                                      <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                  </div>
+                                  <input class="form-control" placeholder="Username" type="text" id="login-username">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <div class="input-group input-group-alternative">
+                                  <div class="input-group-prepend">
+                                      <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                  </div>
+                                  <input class="form-control" placeholder="Password" type="password" id="login-password">
+                              </div>
+                          </div>
+                          <div class="text-center">
+                              <button type="button" class="btn btn-primary my-4">Log in</button>
+                          </div>
+                          <div class="text-center">
+                                <p>Not registered yet? <a href="#" data-toggle="modal" data-target="#modal-form-sign-up">Sign Up</a></p>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal-form-sign-up" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+        <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-body p-0">
+              <div class="card bg-secondary shadow border-0">
+                  <div class="card-body px-lg-5 py-lg-5">
+                      <div class="text-center text-muted mb-4">
+                          <p>Let's get you registered</p>
+                      </div>
+                      <form role="form">
+                          <div class="form-group mb-3">
+                              <div class="input-group input-group-alternative">
+                                  <div class="input-group-prepend">
+                                      <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                  </div>
+                                  <input class="form-control" placeholder="Username" type="text" id="signup-username">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <div class="input-group input-group-alternative">
+                                  <div class="input-group-prepend">
+                                      <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                  </div>
+                                  <input class="form-control" placeholder="Email" type="email" id="signup-email">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <div class="input-group input-group-alternative">
+                                  <div class="input-group-prepend">
+                                      <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                  </div>
+                                  <input class="form-control" placeholder="Password" type="password" id="signup-password">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <div class="input-group input-group-alternative">
+                                  <div class="input-group-prepend">
+                                      <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                  </div>
+                                  <input class="form-control" placeholder="Repeat Password" type="password" id="signup-password-repeat">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <div class="input-group input-group-alternative">
+                                  <div class="input-group-prepend">
+                                      <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                                  </div>
+                                  <input class="form-control" placeholder="Phone" type="number" id="signup-phone">
+                              </div>
+                          </div>
+                          <div class="text-center">
+                              <p>By signing up, I agree to all the <a href="#">terms and conditions</a></p>
+                          </div>
+                          <div class="text-center">
+                              <button type="button" class="btn btn-primary my-4">Sign Up</button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Download modal -->
+
+      <div class="modal fade" id="modal-download" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+        <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-body p-0">
+              <div class="card bg-secondary shadow border-0">
+                  <div class="card-body px-lg-5 py-lg-5">
+                      <div class="text-center mb-8">
+                          <p>Impact is available for iOS. Click download to get started.</p>
+                      </div>
+                      <center>
+                          <button type="button" class="btn btn-outline-primary btn-lg home-buttons" data-toggle="modal" data-target="#modal-download"><i class="fab fa-apple"></i> &nbsp;Download</button>
+                      </center>
+
+                  </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
 
   <footer>
       <div class="footer-custom">
