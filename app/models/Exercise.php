@@ -14,7 +14,7 @@ class Exercise{
 
   public static function fetchAll(){
     $db= new PDO(DB_SERVER,DB_USER,DB_PW);
-    $sql= 'SELECT * from exercise';
+    $sql= 'SELECT * from Exercise';
     $statement=$db->prepare($sql);
     $success=$statement->execute();
     $arr=[];
