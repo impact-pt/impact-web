@@ -7,4 +7,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && stripos($_SERVER['CONTENT_TYPE'], 'a
 }
 require 'environment.php';
 /** MODELS **/
-require 'models/dbtest.php';
+require 'models/exercise.php';
