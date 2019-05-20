@@ -37,6 +37,18 @@ hr.hero-divider {
   /* height: 5%; */
 }
 
+/* ------- navbar tyling -------- */
+
+#home-dropdown {
+  display: none;
+}
+
+#home-dropdown-link:hover #home-dropdown {
+  display: block;
+}
+
+/* ------- ------------------------- -------- */
+
 /* ------- 'getting started' styling -------- */
 
 .home-greet-text {
@@ -84,22 +96,30 @@ hr.hero-divider {
 
 .features-hero{
   /* margin-top: 48px; */
+  margin-left: 90px;
 }
 
 .features-hero-img-div img {
   width: 280px;
-  margin-top: 68px;
+  margin-top: 86px;
   /* margin-left: -60px; */
 }
 
 .features-zigzag{
-  margin-top: 28px;
+  margin-top: -28px;
+  margin-left: -290px;
 }
 
 .features-zigzag-img-div img {
-  width: 200px;
+  width: 400px;
   margin-top: 70px;
-  /* margin-left: -60px; */
+  margin-left: -160px;
+}
+
+.features-zigzag-img-div2 img {
+  width: 400px;
+  /* margin-top: 70px; */
+  /* margin-left: -160px; */
 }
 
 .features-hero-header {
@@ -134,19 +154,21 @@ hr.hero-divider {
 }
 
 #hero1{
- background:url('../img/steps/doctors.png');
-  background-size:cover;
-  background-position:center center;
+  background: url('../img/steps/doctors.png');
+  background-size: cover;
+  background-position: center center;
   /* background-attachment:fixed; */
   border-radius: 8px;
   z-index: -3;
+  /* position: relative; */
+  /* opacity: 0.4; */
 }
 
 #hero2{
- background:url(img/steps/doctors.png);
-  background-size:cover;
-  background-position:center center;
-  background-attachment:fixed;
+  background: url(img/steps/doctors.png);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
   border-radius: 8px;
 }
 
@@ -162,7 +184,7 @@ hr.hero-divider {
 }
 
 .hero .inner{
-  background: rgba(0,0,0,0.5) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC) repeat;
+  background: rgba(0,0,0,0.65) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC) repeat;
   border-radius: 8px;
   box-shadow: 0px 10px 36px -3px #dddddd;
 }
@@ -353,7 +375,7 @@ hr.hero-divider {
 /* ------------------------------------------------------------------------ */
 
 
-/* ------- 'about us' styling -------- */
+/* ------- 'footer' styling -------- */
 .footer-custom {
   margin-top: 54px;
   padding-left: 54px;
@@ -376,6 +398,14 @@ hr.hero-divider {
 
 .copyright-stmt {
   opacity: 0.6;
+}
+
+.contact-form-link-footer {
+  color: #ffffff;
+}
+
+.contact-form-link-footer:hover {
+  color: #eeeeee;
 }
 
 /* ------- ------------------ -------- */
