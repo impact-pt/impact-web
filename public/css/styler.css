@@ -37,7 +37,15 @@ hr.hero-divider {
   /* height: 5%; */
 }
 
-/* ------- navbar tyling -------- */
+.logo-text-red {
+  color: var(--main-accent)
+}
+
+.logo-text-blue {
+  color: var(--secondary-accent)
+}
+
+/* ------- navbar styling -------- */
 
 #home-dropdown {
   display: none;
@@ -112,13 +120,14 @@ hr.hero-divider {
 
 .features-zigzag-img-div img {
   width: 400px;
-  margin-top: 70px;
+  margin-top: 50px;
+  /* margin-right: 170px; */
   margin-left: -160px;
 }
 
 .features-zigzag-img-div2 img {
   width: 400px;
-  /* margin-top: 70px; */
+  margin-top: 70px;
   /* margin-left: -160px; */
 }
 
@@ -142,14 +151,14 @@ hr.hero-divider {
   margin-top: 90px;
   font-size: 32px;
   font-weight: bold;
-  margin-left: 50px;
+  margin-left: 90px;
   color: #000000;
 }
 
 .features-zigzag-sub-header {
   margin-top: 28px;
   font-size: 24px;
-  margin-left: 50px;
+  margin-left: 90px;
   color: #888888;
 }
 
@@ -278,6 +287,7 @@ hr.hero-divider {
 .about-desc p{
   /* position: absolute; */
   margin-top: 12px;
+  margin-right: 22px;
   font-size: 24px;
   color: #888888;
   z-index: 3;
@@ -306,7 +316,7 @@ hr.hero-divider {
 
 .mission-desc p{
   font-size: 24px;
-  font-style: italic;
+  /* font-style: italic; */
   color: #888888;
   z-index: 3;
   margin-top: 12px;
