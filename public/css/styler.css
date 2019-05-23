@@ -37,11 +37,11 @@ hr.hero-divider {
   /* height: 5%; */
 }
 
-.logo-text-red {
+.logo-text-blue {
   color: var(--main-accent)
 }
 
-.logo-text-blue {
+.logo-text-red {
   color: var(--secondary-accent)
 }
 
@@ -253,8 +253,14 @@ hr.hero-divider {
   /* margin-bottom: -800px; */
   margin-top: 12px;
   margin-left: 32px;
-  box-shadow: 0px 10px 40px 1px rgba(25, 118, 210, 0.05);
+  transition: all 0.5s ease 0s;
+  box-shadow: 0px 2px 4px 1px rgba(25, 118, 210, 0.05);
+  border: 0.5px solid #eeeeee;
   border-radius: 8px;
+}
+
+.customer-section:hover {
+  box-shadow: 0px 10px 40px 1px rgba(25, 118, 210, 0.1);
 }
 
 .customer-section img {
@@ -350,8 +356,15 @@ hr.hero-divider {
   margin-top: 32px;
   margin-bottom: 32px;
   margin-left: 32px;
-  box-shadow: 0px 10px 40px 1px rgba(25, 118, 210, 0.1);
   border-radius: 8px;
+  border: 0.5px solid #eeeeee;
+  transition: all 0.5s ease 0s;
+  box-shadow: 0px 2px 4px 1px rgba(25, 118, 210, 0.05);
+}
+
+.team-section:hover {
+  box-shadow: 0px 10px 40px 1px rgba(25, 118, 210, 0.1);
+
 }
 
 .team-section img {
