@@ -2,6 +2,7 @@
 
 class FormQueries{
 
+  public $queryID;
   public $firstName;
   public $lastName;
   public $queryType;
@@ -9,7 +10,7 @@ class FormQueries{
   public $queryMessage;
 
   public function __construct($data){
-    $this->firstName = $data['queryID'];
+    $this->queryID= $data['queryID'];
     $this->firstName = $data['firstName'];
     $this->lastName = $data['lastName'];
     $this->queryType = $data['queryType'];
