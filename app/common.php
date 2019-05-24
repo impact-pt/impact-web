@@ -8,3 +8,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && stripos($_SERVER['CONTENT_TYPE'], 'a
 require 'environment.php';
 /** MODELS **/
 require 'models/Exercise.php';
+require 'models/FormQueries.php';
