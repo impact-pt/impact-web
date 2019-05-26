@@ -40,7 +40,8 @@ class RegisterUser{
     $user_check_stmt = $db->prepare($user_check_query);
     $status = $user_check_stmt->execute([
       $this->email
-    ])
+    ]);
+    
     if($row = $user_check_stmt->fetch(PDO::FETCH_ASSOC)) {
       $queryArr = "User already exists";
       $json = json_encode($queryArr, JSON_PRETTY_PRINT);
