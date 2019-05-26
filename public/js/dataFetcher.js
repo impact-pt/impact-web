@@ -14,6 +14,7 @@ var impactApp = new Vue({
 	      fetch('http://35.196.103.174/api/formQueries.php')
 	      .then(response => response.json())
 	      .then (json => {
+					json.reverse();
 					impactApp.formQueries = json;
 					console.log(impactApp.formQueries);
 				})
@@ -22,12 +23,15 @@ var impactApp = new Vue({
 	      })
 	    },
 			submitFormResponse() {
-				alert(impactApp.queryType);
-				fetch('http://35.196.103.174/api/submitFormQuery.php', {
+				fetch('http://35.196.103.174/api/formQueries.php', {
 				  method: 'POST',
-				  body: JSON.stringify(
-						
-					),
+				  body: JSON.stringify({
+						firstName: impactApp.firstName,
+						lastName: impactApp.lastName,
+						email: impactApp.email,
+						queryType: impactApp.queryType,
+						queryMessage: impactApp.queryMessage
+					}),
 				  headers:{
 				    'Content-Type': 'application/json'
 				  }
