@@ -61,11 +61,12 @@ class RegisterUser{
         $this->phone
       ]);
       $_SESSION['username'] = $this->username;
-  	  $_SESSION['success'] = "You are now registered";
+  	  $_SESSION['success'] = "You are now registered and logged in.";
       $queryArr = "User registered successfully";
       $json = json_encode($queryArr, JSON_PRETTY_PRINT);
       header('Content-Type: application/json');
       echo $json;
+      header('location: logCheck.php')
     }
   }
 
@@ -87,6 +88,7 @@ class RegisterUser{
       $json = json_encode($queryArr, JSON_PRETTY_PRINT);
       header('Content-Type: application/json');
       echo $json;
+      header('location: logCheck.php')
     }
 
     else {
