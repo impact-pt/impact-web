@@ -88,14 +88,13 @@ var impactApp = new Vue({
 				  body: JSON.stringify({
 						request: 'log-in',
 						username: impactApp.logInUser.username,
-						firstName: impactApp.logInUser.password,
+						password: impactApp.logInUser.password,
 					}),
 				  headers:{
 				    'Content-Type': 'application/json'
 				  }
 				}).then(response => response.json())
-				.then(response => {
-					// alert("Registration Successful. Please log in to continue.")
+				.then(response => {					
 					alert(response)
 				})
 				.catch(error => alert('Error:', error));

@@ -142,7 +142,7 @@
                                   <div class="input-group-prepend">
                                       <span class="input-group-text"><i class="fas fa-user"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Username" type="text" id="login-username">
+                                  <input class="form-control" placeholder="Username" type="text" id="login-username" v-model="logInUser.username">
                               </div>
                           </div>
                           <div class="form-group">
@@ -150,7 +150,7 @@
                                   <div class="input-group-prepend">
                                       <span class="input-group-text"><i class="fas fa-key"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Password" type="text" id="login-password">
+                                  <input class="form-control" placeholder="Password" type="password" id="login-password" v-model="logInUser.password">
                               </div>
                           </div>
                           <div class="text-center">

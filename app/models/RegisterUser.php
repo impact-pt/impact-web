@@ -10,7 +10,6 @@ class RegisterUser{
   public $phone;
 
   public function __construct($data){
-
     $this->username = isset($data['username']) ? $data['username'] : null;
     $this->firstName = isset($data['firstName']) ? $data['firstName'] : null;
     $this->lastName = isset($data['lastName']) ? $data['lastName'] : null;
