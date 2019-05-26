@@ -50,7 +50,7 @@ var impactApp = new Vue({
 				  }
 				}).then(response => response.json())
 				.then(response => {
-					alert("Thank You! We'll get back to you shortly!")
+					alert(response);
 				})
 				.catch(error => console.error('Error:', error));
 			},
