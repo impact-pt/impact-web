@@ -26,6 +26,9 @@
   <!-- Font awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
+  <!-- Vue JS -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
@@ -120,6 +123,8 @@
     <img src="img/appScreens/app1.png">
   </div>
 
+  <div id="aggregatorDiv">
+
   <!--log in / sign up modals-->
 
       <div class="modal fade" id="modal-form-log-in" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
@@ -172,13 +177,29 @@
                       <div class="text-center text-muted mb-4">
                           <p>Let's get you registered</p>
                       </div>
-                      <form role="form">
+                      <form @submit.prevent="registerUserCall">
                           <div class="form-group mb-3">
                               <div class="input-group input-group-alternative">
                                   <div class="input-group-prepend">
                                       <span class="input-group-text"><i class="fas fa-user"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Username" type="text" id="signup-username">
+                                  <input class="form-control" placeholder="Username" type="text" id="signup-username" v-model="registerUser.username" value="asmpatel" required>
+                              </div>
+                          </div>
+                          <div class="form-group mb-3">
+                              <div class="input-group input-group-alternative">
+                                  <div class="input-group-prepend">
+                                      <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                  </div>
+                                  <input class="form-control" placeholder="First Name" type="text" id="signup-firstName" v-model="registerUser.firstName" value="asmpatel" required>
+                              </div>
+                          </div>
+                          <div class="form-group mb-3">
+                              <div class="input-group input-group-alternative">
+                                  <div class="input-group-prepend">
+                                      <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                  </div>
+                                  <input class="form-control" placeholder="Last Name" type="text" id="signup-lastName" v-model="registerUser.lastName" value="asmpatel" required>
                               </div>
                           </div>
                           <div class="form-group">
@@ -186,7 +207,7 @@
                                   <div class="input-group-prepend">
                                       <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Email" type="email" id="signup-email">
+                                  <input class="form-control" placeholder="Email" type="email" id="signup-email" v-model="registerUser.email" value="asmpatel@email.com" required>
                               </div>
                           </div>
                           <div class="form-group">
@@ -194,7 +215,7 @@
                                   <div class="input-group-prepend">
                                       <span class="input-group-text"><i class="fas fa-key"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Password" type="password" id="signup-password">
+                                  <input class="form-control" placeholder="Password" type="password" id="signup-password" v-model="registerUser.password" value="asmpatel" required>
                               </div>
                           </div>
                           <div class="form-group">
@@ -202,7 +223,7 @@
                                   <div class="input-group-prepend">
                                       <span class="input-group-text"><i class="fas fa-key"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Repeat Password" type="password" id="signup-password-repeat">
+                                  <input class="form-control" placeholder="Repeat Password" type="password" id="signup-password-repeat" v-model="registerUser.repeatPassword" value="asmpatel" required>
                               </div>
                           </div>
                           <div class="form-group">
@@ -210,7 +231,7 @@
                                   <div class="input-group-prepend">
                                       <span class="input-group-text"><i class="fas fa-phone"></i></span>
                                   </div>
-                                  <input class="form-control" placeholder="Phone" type="number" id="signup-phone">
+                                  <input class="form-control" placeholder="Phone" type="number" id="signup-phone" v-model="registerUser.phone" value="1234" required>
                               </div>
                           </div>
                           <div class="text-center">
@@ -227,6 +248,8 @@
           </div>
         </div>
       </div>
+
+    </div>
 
       <!-- Download modal -->
 
@@ -292,5 +315,8 @@
 
   <!-- Theme JS -->
   <script src="assets/js/argon.js"></script>
+
+  <!-- Custom app -->
+  <script src="js/dataFetcher.js"></script>
   </body>
 </html>

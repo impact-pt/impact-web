@@ -54,7 +54,7 @@ var impactApp = new Vue({
 				})
 				.catch(error => console.error('Error:', error));
 			},
-			registerUser() {
+			registerUserCall() {
 				if (impactApp.registerUser.password !== impactApp.registerUser.repeatPassword) {
 					alert("Please repeat the correct password and try again.")
 					location.reload();
@@ -75,11 +75,11 @@ var impactApp = new Vue({
 				  }
 				}).then(response => response.json())
 				.then(response => {
-					// alert("Registration Successful. Please log in to continue.")
+					alert(response)
 				})
 				.catch(error => alert('Error:', error));
 			},
-			logInUser() {
+			logInUserCall() {
 				fetch('http://35.196.103.174/api/registerUser.php', {
 				  method: 'POST',
 				  body: JSON.stringify({
