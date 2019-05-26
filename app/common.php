@@ -9,4 +9,3 @@ require 'environment.php';
 /** MODELS **/
 require 'models/Exercise.php';
 require 'models/FormQueries.php';
-require 'models/submitFormQuery.php';
