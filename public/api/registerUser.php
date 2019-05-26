@@ -1,4 +1,5 @@
 <?php
+require '../../app/common.php';
 
 session_start();
 
