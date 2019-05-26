@@ -10,7 +10,7 @@ class FormQueries{
   public $queryMessage;
 
   public function __construct($data){
-    $this->queryID= isset($data['queryID'] ? intval($data['queryID']) : null);
+    $this->queryID= isset($data['queryID']) ? intval($data['queryID']) : null;
     $this->firstName = $data['firstName'];
     $this->lastName = $data['lastName'];
     $this->queryType = $data['queryType'];
