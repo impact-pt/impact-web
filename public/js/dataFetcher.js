@@ -94,8 +94,9 @@ var impactApp = new Vue({
 				    'Content-Type': 'application/json'
 				  }
 				}).then(response => response.json())
-				.then(response => {					
-					alert(response)
+				.then(response => {
+					alert(response);
+					sessionStorage.setItem("username", impactApp.logInUser.username);
 				})
 				.catch(error => alert('Error:', error));
 			}
