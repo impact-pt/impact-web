@@ -58,6 +58,7 @@ var impactApp = new Vue({
 				fetch('http://35.196.103.174/api/registerUser.php', {
 				  method: 'POST',
 				  body: JSON.stringify({
+						request: 'register',
 						username: impactApp.registerUser.username,
 						firstName: impactApp.registerUser.firstName,
 						lastName: impactApp.registerUser.lastName,
