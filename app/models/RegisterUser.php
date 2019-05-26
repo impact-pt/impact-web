@@ -11,8 +11,8 @@ class RegisterUser{
 
   public function __construct($data){
     $this->username = $data['username'];
-    $this->firstName = $data['firstName']
-    $this->lastName = $data['lastName']
+    $this->firstName = $data['firstName'];
+    $this->lastName = $data['lastName'];
     $this->email = $data['email'];
     $this->password = $data['password'];
     $this->phone = $data['phone'];
