@@ -88,7 +88,7 @@ var impactApp = new Vue({
 				  body: JSON.stringify({
 						request: 'log-in',
 						username: impactApp.logInUser.username,
-						firstName: impactApp.logInUser.password,
+						firstName: impactApp.logInUser.password.toString(),
 					}),
 				  headers:{
 				    'Content-Type': 'application/json'

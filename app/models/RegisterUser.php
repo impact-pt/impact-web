@@ -91,7 +91,7 @@ class RegisterUser{
     }
 
     else {
-      $queryArr = "Wrong username/password. Please try again.";
+      $queryArr = "Wrong username "+$this->username+"/ password"+$this->password+". Please try again.";
       $json = json_encode($queryArr, JSON_PRETTY_PRINT);
       header('Content-Type: application/json');
       echo $json;
