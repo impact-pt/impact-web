@@ -10,12 +10,13 @@ class RegisterUser{
   public $phone;
 
   public function __construct($data){
-    $this->username = $data['username'];
-    $this->firstName = $data['firstName'];
-    $this->lastName = $data['lastName'];
-    $this->email = $data['email'];
-    $this->password = $data['password'];
-    $this->phone = $data['phone'];
+
+    $this->username = isset($data['username']) ? $data['username'] : null;
+    $this->firstName = isset($data['firstName']) ? $data['firstName'] : null;
+    $this->lastName = isset($data['lastName']) ? $data['lastName'] : null;
+    $this->email = isset($data['email']) ? $data['email'] : null;
+    $this->password = isset($data['password']) ? $data['password'] : null;
+    $this->phone = isset($data['phone']) ? $data['phone'] : null;
   }
 
   // for future use
@@ -61,8 +62,34 @@ class RegisterUser{
         $this->phone
       ]);
       $_SESSION['username'] = $this->username;
-  	  $_SESSION['success'] = "You are now logged in";
+  	  $_SESSION['success'] = "You are now registered";
       $queryArr = "User registered successfully";
+      $json = json_encode($queryArr, JSON_PRETTY_PRINT);
+      header('Content-Type: application/json');
+      echo $json;
+    }
+  }
+
+  public function check() {
+    $db = new PDO(DB_SERVER, DB_USER, DB_PW);
+    $user_check_query = "SELECT * FROM RegisteredUsers WHERE username = ? AND pass = ? LIMIT 1";
+    $user_check_stmt = $db->prepare($user_check_query);
+    $status = $user_check_stmt->execute([
+      $this->username,
+      $this->password
+    ]);
+    $row = $user_check_stmt->fetch(PDO::FETCH_ASSOC);
+
+    if(mysqli_num_rows($row) == 1) {
+      $_SESSION['username'] = $this->username;
+  	  $_SESSION['success'] = "You are now logged in";
+      $queryArr = "User logged in successfully";
+      $json = json_encode($queryArr, JSON_PRETTY_PRINT);
+      header('Content-Type: application/json');
+      echo $json;
+    }
+    else {
+      $queryArr = "Wrong username/password. Please try again.";
       $json = json_encode($queryArr, JSON_PRETTY_PRINT);
       header('Content-Type: application/json');
       echo $json;

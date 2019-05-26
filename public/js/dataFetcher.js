@@ -15,6 +15,10 @@ var impactApp = new Vue({
 				password: '',
 				repeatPassword: '',
 				phone: ''
+			},
+			logInUser: {
+				username: '',
+				password: ''
 			}
 		},
 	  methods: {
@@ -74,10 +78,26 @@ var impactApp = new Vue({
 					// alert("Registration Successful. Please log in to continue.")
 				})
 				.catch(error => alert('Error:', error));
+			},
+			logInUser() {
+				fetch('http://35.196.103.174/api/registerUser.php', {
+				  method: 'POST',
+				  body: JSON.stringify({
+						request: 'log-in',
+						username: impactApp.logInUser.username,
+						firstName: impactApp.logInUser.password,
+					}),
+				  headers:{
+				    'Content-Type': 'application/json'
+				  }
+				}).then(response => response.json())
+				.then(response => {
+					// alert("Registration Successful. Please log in to continue.")
+				})
+				.catch(error => alert('Error:', error));
 			}
 	  },
 		created() {
-
 			this.fetchQueries()
 		}
 	})
