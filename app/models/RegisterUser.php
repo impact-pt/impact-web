@@ -60,7 +60,7 @@ class RegisterUser{
         $this->password,
         $this->phone
       ]);
-      $_SESSION['username'] = $username;
+      $_SESSION['username'] = $this->username;
   	  $_SESSION['success'] = "You are now logged in";
       $queryArr = "User registered successfully";
       $json = json_encode($queryArr, JSON_PRETTY_PRINT);
