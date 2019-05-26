@@ -79,6 +79,9 @@ var impactApp = new Vue({
 				})
 				.catch(error => alert('Error:', error));
 			},
+			testAlert() {
+				alert("Falala!");
+			},
 			logInUserCall() {
 				fetch('http://35.196.103.174/api/registerUser.php', {
 				  method: 'POST',
@@ -93,6 +96,7 @@ var impactApp = new Vue({
 				}).then(response => response.json())
 				.then(response => {
 					// alert("Registration Successful. Please log in to continue.")
+					alert(response)
 				})
 				.catch(error => alert('Error:', error));
 			}

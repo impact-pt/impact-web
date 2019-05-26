@@ -79,7 +79,9 @@ class RegisterUser{
       $this->password
     ]);
 
-    if($row = $user_check_stmt->fetch(PDO::FETCH_ASSOC)) {
+    $row = $user_check_stmt->fetch(PDO::FETCH_ASSOC);
+
+    if($row) {
       $_SESSION['username'] = $this->username;
   	  $_SESSION['success'] = "You are now logged in";
       $queryArr = "User logged in successfully";
@@ -87,7 +89,7 @@ class RegisterUser{
       header('Content-Type: application/json');
       echo $json;
     }
-    
+
     else {
       $queryArr = "Wrong username/password. Please try again.";
       $json = json_encode($queryArr, JSON_PRETTY_PRINT);
