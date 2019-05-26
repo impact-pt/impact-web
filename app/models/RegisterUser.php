@@ -65,8 +65,8 @@ class RegisterUser{
       $queryArr = "User registered successfully";
       $json = json_encode($queryArr, JSON_PRETTY_PRINT);
       header('Content-Type: application/json');
+      header('location: logCheck.php');
       echo $json;
-      header('location: logCheck.php')
     }
   }
 
@@ -87,8 +87,8 @@ class RegisterUser{
       $queryArr = "User logged in successfully";
       $json = json_encode($queryArr, JSON_PRETTY_PRINT);
       header('Content-Type: application/json');
+      header('location: logCheck.php');
       echo $json;
-      header('location: logCheck.php')
     }
 
     else {
