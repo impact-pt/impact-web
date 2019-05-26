@@ -76,8 +76,6 @@ CREATE TABLE RegisteredUsers (
     pass VARCHAR(200) NOT NULL
 )
 
-
-
 SELECT * FROM AssignedExercise;
 SELECT * FROM FormQueries;
 SELECT * FROM RegisteredUsers;

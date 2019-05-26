@@ -42,6 +42,9 @@ class FormQueries{
       $this->queryType,
       $this->queryMessage
     ]);
-    echo "Message received.";
+    $queryResponse = "Thank you "+ $this->firstName +. "We\'ll get back to you shortly!";
+    $json = json_encode($queryResponse, JSON_PRETTY_PRINT);
+    header('Content-Type: application/json');
+    echo $json;
   }
 }
