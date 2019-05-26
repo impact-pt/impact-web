@@ -22,6 +22,10 @@
     <!-- Custom styler CSS -->
     <link rel="stylesheet" href="css/styler.css">
     <link rel="stylesheet" href="css/bootstrap-customizer.css">
+
+    <!-- Vue JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
   </head>
   <body>
 
@@ -197,21 +201,24 @@
         <div class="about-desc">
           <p>Fill out the form for any questions or business inquiries below</p>
         </div>
+
+        <div id="aggregatorDiv">
+
         <div class="row">
           <div class="col-8">
             <div class="contact-form">
-              <form>
+              <form @submit.prevent="submitFormResponse">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="f-name">First Name</label>
-                      <input type="text" class="form-control form-control-alternative" id="f-name" placeholder="First Name" required>
+                      <input type="text" class="form-control form-control-alternative" id="f-name" placeholder="First Name" v-model="firstName" required>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="l-name">Last Name</label>
-                      <input type="text" class="form-control form-control-alternative" id="l-name" placeholder="Last Name" required>
+                      <input type="text" class="form-control form-control-alternative" id="l-name" placeholder="Last Name" v-model="lastName" required>
                     </div>
                   </div>
                 </div>
@@ -219,7 +226,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="email">Email</label>
-                      <input type="email" class="form-control form-control-alternative" id="email" placeholder="abc@xyz.com" required>
+                      <input type="email" class="form-control form-control-alternative" id="email" placeholder="abc@xyz.com" value="awesome" v-model="email" required>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -239,10 +246,10 @@
                     <!-- </div> -->
                     <div class="form-group">
                       <label for="inquiry-type">Inquiry Type</label>
-                      <select class="form-control" id="inquiry-type">
-                        <option>choose an option...</option>
-                        <option>General Questions</option>
-                        <option>Business Inquiry</option>
+                      <select class="form-control" id="inquiry-type" v-model="queryType">
+                        <option disabled>choose an option...</option>
+                        <option value="1">General Questions</option>
+                        <option value="2">Business Inquiry</option>
                       </select>
                     </div>
                     <!-- <div class="form-group">
@@ -256,13 +263,13 @@
                   <div class="col-md-12">
                     <div class="form-group">
                       <label for="email">Inquiry Message</label>
-                      <textarea class="form-control form-control-alternative" rows="3" placeholder="type your inquiry text here ..." required></textarea>
+                      <textarea class="form-control form-control-alternative" rows="3" placeholder="type your inquiry text here ..." v-model="queryMessage" required></textarea>
                     </div>
                   </div>
                 </div>
-                <button class="btn btn-icon btn-3 btn-secondary" type="submit">
-	                 <span class="btn-inner--icon"><i class="ni ni-send"></i></span>
-                   <span class="btn-inner--text">Submit</span>
+                <button class="btn btn-icon btn-3 btn-secondary" type="submit">Submit
+	                 <!-- <span class="btn-inner--icon"><i class="ni ni-send"></i></span> -->
+                   <!-- <span class="btn-inner--text">Submit</span> -->
                 </button>
               </form>
             </div>
@@ -273,6 +280,8 @@
             </div>
           </div>
         </div>
+
+      </div>
 
 
       </div>
@@ -322,5 +331,9 @@
       // initialise
       headroom.init();
     </script> -->
+
+    <!-- Custom app -->
+    <script src="js/dataFetcher.js"></script>
+
   </body>
 </html>

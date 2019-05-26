@@ -1,8 +1,7 @@
 <?php
 
-class FormQueries{
+class SubmitFormQuery{
 
-  public $queryID;
   public $firstName;
   public $lastName;
   public $queryType;
@@ -10,7 +9,6 @@ class FormQueries{
   public $queryMessage;
 
   public function __construct($data){
-    $this->queryID= isset($data['queryID'] ? intval($data['queryID']) : null);
     $this->firstName = $data['firstName'];
     $this->lastName = $data['lastName'];
     $this->queryType = $data['queryType'];
@@ -44,4 +42,18 @@ class FormQueries{
     ]);
     echo "Message received.";
   }
+
+  // public function create() {
+  //   $db = new PDO(DB_SERVER, DB_USER, DB_PW);
+  //   $sql = 'INSERT COMMENT_PHP(comment) VALUES (?)';
+  //   $statement = $db->prepare($sql);
+  //   $success = $statement->execute([
+  //     $this->comment
+  //   ]);
+  //   $this->id = $db->lastInsertId();
+  //   $temp = array (
+  //         "id"=>$this->id,
+  //         "comment"=>$this->comment
+  //       );
+  // }
 }

@@ -3,6 +3,7 @@ require '../../app/common.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   //require 'clientPost.php';
+  require 'submitFormQuery.php';
   exit;
 }
 

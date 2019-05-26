@@ -26,6 +26,9 @@
   <!-- Font awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
+  <!-- Vue JS -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
@@ -109,30 +112,32 @@
 
   <hr class="hero-divider" style="margin-left: auto; margin-right: auto;">
 
-  <div class="query-table">
-    <div class="container">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Query Type</th>
-            <th scope="col">Message</th>
-            <th scope="col">Email</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>Mark</td>
-            <td>Mark</td>
-          </tr>
-        </tbody>
-      </table>
+  <div id="aggregatorDiv">
+    <div class="query-table">
+      <div class="container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Query Type</th>
+              <th scope="col">Message</th>
+              <th scope="col">Email</th>
+            </tr>
+          </thead>
+          <tbody v-if="formQueries">
+            <tr v-for="item in formQueries">
+              <th scope="row">{{item.queryID}}</th>
+              <td>{{item.firstName}}</td>
+              <td>{{item.lastName}}</td>
+              <td>{{item.queryType}}</td>
+              <td>{{item.queryMessage}}</td>
+              <td><a :href="'mailto:' + item.email + '?subject=Impact Form - Response&body=Hello there, Thanks for reaching out to us.'">{{item.email}}</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 
@@ -183,5 +188,9 @@
 
   <!-- Theme JS -->
   <script src="assets/js/argon.js"></script>
+
+  <!-- Custom app -->
+  <script src="js/dataFetcher.js"></script>
+
   </body>
 </html>
