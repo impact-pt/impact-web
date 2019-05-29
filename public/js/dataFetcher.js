@@ -19,6 +19,10 @@ var impactApp = new Vue({
 			logInUser: {
 				username: '',
 				password: ''
+			},
+			logInPhysician: {
+				username: '',
+				accessCode: ''
 			}
 		},
 	  methods: {
@@ -96,7 +100,28 @@ var impactApp = new Vue({
 				}).then(response => response.json())
 				.then(response => {
 					alert(response);
-					sessionStorage.setItem("username", impactApp.logInUser.username);
+					localStorage.clear();
+					localStorage.setItem("username", impactApp.logInUser.username);
+				})
+				.catch(error => alert('Error:', error));
+			},
+			logInPhysicianCall() {
+				fetch('http://35.196.103.174/api/registerUser.php', {
+				  method: 'POST',
+				  body: JSON.stringify({
+						request: 'log-in-phy',
+						username: impactApp.logInPhysician.username,
+						accessCode: impactApp.logInPhysician.accessCode,
+					}),
+				  headers:{
+				    'Content-Type': 'application/json'
+				  }
+				}).then(response => response.json())
+				.then(response => {
+					alert(response);
+					localStorage.clear();
+					localStorage.setItem("username", impactApp.logInPhysician.username);
+					localStorage.setItem("role", "physician");
 				})
 				.catch(error => alert('Error:', error));
 			}

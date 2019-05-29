@@ -8,6 +8,7 @@ class RegisterUser{
   public $email;
   public $password;
   public $phone;
+  public $accessCode;
 
   public function __construct($data){
     $this->username = isset($data['username']) ? $data['username'] : null;
@@ -16,6 +17,7 @@ class RegisterUser{
     $this->email = isset($data['email']) ? $data['email'] : null;
     $this->password = isset($data['password']) ? $data['password'] : null;
     $this->phone = isset($data['phone']) ? $data['phone'] : null;
+    $this->accessCode = isset($data['accessCode']) ? $data['accessCode'] : null;
   }
 
   // for future use
@@ -50,7 +52,7 @@ class RegisterUser{
     }
     else {
       $db = new PDO(DB_SERVER, DB_USER, DB_PW);
-      $sql = 'INSERT INTO RegisteredUsers(username, firstName, lastName, email, pass, phone) VALUES (?, ?, ?, ?, ?, ?)';
+      $sql = 'INSERT INTO RegisteredUser(username, firstName, lastName, email, pass, phone) VALUES (?, ?, ?, ?, ?, ?)';
       $statement = $db->prepare($sql);
       $success = $statement->execute([
         $this->username,
@@ -70,9 +72,9 @@ class RegisterUser{
     }
   }
 
-  public function check() {
+  public function checkUser() {
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
-    $user_check_query = "SELECT * FROM RegisteredUsers WHERE username = ? AND pass = ? LIMIT 1";
+    $user_check_query = "SELECT * FROM RegisteredUser WHERE username = ? AND pass = ? LIMIT 1";
     $user_check_stmt = $db->prepare($user_check_query);
     $status = $user_check_stmt->execute([
       $this->username,
@@ -93,6 +95,34 @@ class RegisterUser{
 
     else {
       $queryArr = "Wrong username: ". $this->username. "/ password: ".$this->password.". \nPlease try again.";
+      $json = json_encode($queryArr, JSON_PRETTY_PRINT);
+      header('Content-Type: application/json');
+      echo $json;
+    }
+  }
+
+  public function checkPhysician() {
+    $db = new PDO(DB_SERVER, DB_USER, DB_PW);
+    $phy_check_query = "SELECT * FROM Physician WHERE username = ? AND accessCode = ? LIMIT 1";
+    $phy_check_stmt = $db->prepare($phy_check_query);
+    $status = $phy_check_stmt->execute([
+      $this->username,
+      $this->accessCode
+    ]);
+
+    $row = $phy_check_stmt->fetch(PDO::FETCH_ASSOC);
+
+    if($row) {
+      $_SESSION['username'] = $this->username;
+  	  $_SESSION['success'] = "You are now logged in";
+      $queryArr = "Hello ".$this->username.". Please click OK to continue";
+      $json = json_encode($queryArr, JSON_PRETTY_PRINT);
+      header('Content-Type: application/json');
+      echo $json;
+    }
+
+    else {
+      $queryArr = "Wrong username: ". $this->username. "/ access code: ".$this->password.". \nPlease try again. If problem persists, please contact the administrator.";
       $json = json_encode($queryArr, JSON_PRETTY_PRINT);
       header('Content-Type: application/json');
       echo $json;

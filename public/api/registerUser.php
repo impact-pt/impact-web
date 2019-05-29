@@ -8,5 +8,5 @@ if ($_POST['request'] == 'register') {
   $queryArr->create();
 }
 else {
-  $queryArr->check();
+  $queryArr->checkUser();
 }
