@@ -10,3 +10,4 @@ require 'environment.php';
 require 'models/Exercise.php';
 require 'models/FormQueries.php';
 require 'models/RegisterUser.php';
+require 'models/FetchPatients.php';
