@@ -122,6 +122,7 @@ var impactApp = new Vue({
 					localStorage.clear();
 					localStorage.setItem("username", impactApp.logInPhysician.username);
 					localStorage.setItem("role", "physician");
+					window.open ('doctor_home.html', '_self', false)
 				})
 				.catch(error => alert('Error:', error));
 			}
