@@ -14,8 +14,7 @@ class FetchPatients{
     // $sql = 'SELECT * FROM RegisteredUser';
     $sql = 'SELECT ru.username, ru.firstName, ru.lastName, ru.email, ru.phone FROM Physician phy, RegisteredUser ru, AssignedPhysician ap WHERE ap.userID = ru.userID AND ap.assignedPhysicianID = phy.physicianID AND phy.username = ?';
     $statement = $db->prepare($sql);
-    $statement->bindParam("s", $this->username);
-    $success = $statement->execute();
+    $success = $statement->execute($this->username);
     $arr=[];
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
       $temp =  new FetchPatients($row);
