@@ -10,10 +10,6 @@ class FetchPatients{
 
   public function __construct($data){
     $this->username = isset($data['username']) ? $data['username'] : null;
-    $this->firstName = isset($data['firstName']) ? $data['firstName'] : null;
-    $this->lastName = isset($data['lastName']) ? $data['lastName'] : null;
-    $this->email = isset($data['email']) ? $data['email'] : null;
-    $this->phone = isset($data['phone']) ? $data['phone'] : null;
   }
 
   public function fetchPatients() {
