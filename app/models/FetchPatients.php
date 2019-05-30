@@ -24,8 +24,10 @@ class FetchPatients{
     $success = $statement->execute($this->username);
     $arr=[];
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-      $temp =  new FetchPatients($row);
-      array_push($arr, $temp);
+      // $username->$row['username'];
+      // $firstname->$row['firstName'];
+      // $temp
+      array_push($arr, $row);
     }
     return $arr;
   }
