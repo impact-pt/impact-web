@@ -3,10 +3,6 @@
 class FetchPatients{
 
   public $username;
-  public $firstName;
-  public $lastName;
-  public $email;
-  public $phone;
 
   public function __construct($data){
     $this->username = isset($data['username']) ? $data['username'] : null;
