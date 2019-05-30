@@ -3,9 +3,17 @@
 class FetchPatients{
 
   public $username;
+  public $firstName;
+  public $lastName;
+  public $email;
+  public $phone;
 
   public function __construct($data){
     $this->username = isset($data['username']) ? $data['username'] : null;
+    $this->firstName = isset($data['firstName']) ? $data['firstName'] : null;
+    $this->lastName = isset($data['lastName']) ? $data['lastName'] : null;
+    $this->email = isset($data['email']) ? $data['email'] : null;
+    $this->phone = isset($data['phone']) ? $data['phone'] : null;
   }
 
   public function fetchPatients() {
@@ -16,10 +24,8 @@ class FetchPatients{
     $success = $statement->execute($this->username);
     $arr=[];
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-      // $username->$row['username'];
-      // $firstname->$row['firstName'];
-      // $temp
-      array_push($arr, $row);
+      $temp =  new FetchPatients($row);
+      array_push($arr, $temp);
     }
     return $arr;
   }
