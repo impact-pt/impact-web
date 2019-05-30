@@ -10,12 +10,12 @@ class FetchPatients{
 
   public static function fetchPatients() {
     $db= new PDO(DB_SERVER,DB_USER,DB_PW);
-    $sql = 'SELECT * FROM RegisteredUser';
-    // $sql= 'SELECT ru.username, ru.firstName, ru.lastName, ru.email, ru.phone FROM Physician phy, RegisteredUser ru, AssignedPhysician ap WHERE ap.userID = ru.userID AND ap.assignedPhysicianID = phy.physicianID AND phy.username = ?';
+    // $sql = 'SELECT * FROM RegisteredUser';
+    $sql= 'SELECT ru.username, ru.firstName, ru.lastName, ru.email, ru.phone FROM Physician phy, RegisteredUser ru, AssignedPhysician ap WHERE ap.userID = ru.userID AND ap.assignedPhysicianID = phy.physicianID AND phy.username = '$this->username'';
     $statement = $db->prepare($sql);
-    $success = $statement->execute([
-      $this->username
-    ]);
+    $success = $statement->execute(
+      // $this->username
+    );
     $arr=[];
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
       $temp =  new FetchPatients($row);
