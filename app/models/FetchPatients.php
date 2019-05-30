@@ -27,6 +27,8 @@ class FetchPatients{
       $temp =  new FetchPatients($row);
       array_push($arr, $temp);
     }
-    return $arr;
+    $json = json_encode($arr, JSON_PRETTY_PRINT);
+    header('Content-Type: application/json');
+    echo $json;
   }
 }
