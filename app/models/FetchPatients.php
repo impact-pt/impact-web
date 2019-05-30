@@ -8,7 +8,7 @@ class FetchPatients{
     $this->username = isset($data['username']) ? $data['username'] : null;
   }
 
-  public static function fetchPatients() {
+  public function fetchPatients() {
     echo $this->username;
     $db= new PDO(DB_SERVER,DB_USER,DB_PW);
     // $sql = 'SELECT * FROM RegisteredUser';
