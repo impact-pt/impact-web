@@ -9,7 +9,7 @@ class FetchPatients{
   }
 
   public static function fetchPatients() {
-    // global $username;
+    global $username;
     $db= new PDO(DB_SERVER,DB_USER,DB_PW);
     // $sql = 'SELECT * FROM RegisteredUser';
     $sql= 'SELECT ru.username, ru.firstName, ru.lastName, ru.email, ru.phone FROM Physician phy, RegisteredUser ru, AssignedPhysician ap WHERE ap.userID = ru.userID AND ap.assignedPhysicianID = phy.physicianID AND phy.username = ?';
