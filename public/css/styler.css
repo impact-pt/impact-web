@@ -38,11 +38,15 @@ hr.hero-divider {
 }
 
 .logo-text-blue {
-  color: var(--main-accent)
+  color: var(--main-accent);
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .logo-text-red {
-  color: var(--secondary-accent)
+  color: var(--secondary-accent);
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 /* ------- navbar styling -------- */
@@ -399,6 +403,12 @@ hr.hero-divider {
 
 
 /* ------- 'footer' styling -------- */
+
+.footer-logo {
+  width: 40%;
+  padding-bottom: 20px;
+}
+
 .footer-custom {
   margin-top: 54px;
   padding-left: 54px;

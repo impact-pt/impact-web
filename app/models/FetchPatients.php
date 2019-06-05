@@ -24,7 +24,7 @@ class FetchPatients{
     $success = $statement->execute($this->username);
     $arr=[];
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-      $temp =  new FetchPatients($row);
+      $temp = new FetchPatients($row);
       array_push($arr, $temp);
     }
     $json = json_encode($arr, JSON_PRETTY_PRINT);

@@ -155,3 +155,5 @@ WHERE ru.username = 'ashok' AND ru.userID = ae.userID AND ae.assignedExerciseID 
 SELECT ru.firstName, ru.lastName, a.appointmentDate, a.appointmentTime
 FROM Appointment a, Physician phy, RegisteredUser ru
 WHERE phy.username = a.physicianUsername AND phy.username = 'liz' AND ru.userID = a.userID
+
+SELECT ru.username AS username, ru.firstName AS firstName, ru.lastName as lastName, ru.email as email, ru.phone AS phone FROM Physician phy, RegisteredUser ru, AssignedPhysician ap WHERE ap.userID = ru.userID AND ap.assignedPhysicianID = phy.physicianID AND phy.username = 'kayla'
